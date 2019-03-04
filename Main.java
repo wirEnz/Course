@@ -55,7 +55,7 @@ public class Main {
 		}
 		*/
 		// odd or evan number
-		/*
+		
 		System.out.println("Please enter a number");
 		int num = scanner.nextInt();
 		
@@ -65,7 +65,7 @@ public class Main {
 		}else {
 			System.out.println("Your number is odd");
 		}
-		*/
+		
 			
 		scanner.close();
 		
