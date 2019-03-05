@@ -54,6 +54,7 @@ public class Main {
 			System.out.println(num + " is less than " + num2);
 		}
 		*/
+		
 		// odd or evan number
 		/*
 		System.out.println("Please enter a number");
@@ -67,18 +68,47 @@ public class Main {
 		}
 		*/
 		
+		// name to0 long or too short
+		/*
 		String name;
 		System.out.println("Please enter your name");
-		name = scanner.toString();
+		name = scanner.next();
 		
-		if (name.length() == 20) {
+		if (name.length() > 20) {
 			System.out.println("To many characters");
-		}else if (name.length() <= 20) {
-			System.out.println("You name is " + name);
+		}else if (name.length() < 3){
+			System.out.println("You name is to short");
+		}else{
+			System.out.println("Your name is " + name);
 		}
+		*/
+		
+		// Highest number
+		/*
+		int firstNum, secondNum, thirdNum;
+		
+		System.out.println("Please enter a number ");
+		firstNum = scanner.nextInt();
+		
+		System.out.println("Please enter a second number ");
+		secondNum = scanner.nextInt();
+		
+		System.out.println("Please enter a third number ");
+		thirdNum = scanner.nextInt();
+		
+		if (firstNum > secondNum && firstNum > thirdNum) {
+			System.out.println("The highest number is " + firstNum);
+		} else if (secondNum > firstNum && secondNum > thirdNum) {
+			System.out.println("The highest number is " + secondNum);
+		} else if (thirdNum > firstNum && thirdNum > secondNum) {
+			System.out.println("The highest number is " + thirdNum);
+		} else {
+			System.out.println("Two or more numbers are the same");
+		}
+		*/
 		
 		
-			
+					
 		scanner.close();
 		
 		
