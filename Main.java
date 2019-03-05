@@ -55,7 +55,7 @@ public class Main {
 		}
 		*/
 		// odd or evan number
-		
+		/*
 		System.out.println("Please enter a number");
 		int num = scanner.nextInt();
 		
@@ -65,6 +65,18 @@ public class Main {
 		}else {
 			System.out.println("Your number is odd");
 		}
+		*/
+		
+		String name;
+		System.out.println("Please enter your name");
+		name = scanner.toString();
+		
+		if (name.length() == 20) {
+			System.out.println("To many characters");
+		}else if (name.length() <= 20) {
+			System.out.println("You name is " + name);
+		}
+		
 		
 			
 		scanner.close();
