@@ -107,11 +107,36 @@ public class Main {
 		}
 		*/
 		
+		// Nesting example 
+		/*
+		int age, height, weight;
 		
-					
+		System.out.println("Enter your age");
+		age = scanner.nextInt();
+		
+		
+		if (age >= 10) {
+			System.out.println("Enter your height in CM: ");
+			height = scanner.nextInt();
+			
+			System.out.println("enter your weight");
+			weight = scanner.nextInt();
+			
+			if (height < 150) {
+				System.out.println("You are too short for this ride sorry...");
+			}else if(height > 200) {
+				System.out.println("you are too tall for this ride sorry...");
+			}else if (weight < 200) {
+				System.out.println("Welcome abored Captine!");
+			}else {
+				System.out.println("Your too heavy for this ride");
+			}
+			
+		}else{
+				System.out.println("sorry you are too young for this ride");
+		}
+		*/					
 		scanner.close();
-		
-		
 	}
 
 }
