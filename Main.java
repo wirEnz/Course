@@ -194,6 +194,9 @@ public class Main {
 				monthText = "decemeber";
 				break;
 			}
+			default: {
+				System.out.println("There are only 12 Months in a year...");
+			}
 		
 		}
 		
