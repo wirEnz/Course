@@ -197,6 +197,7 @@ public class Main {
 		
 		}
 		
+		// != if the input is = not equal null(nothing)  and the text is empty "" (which it is set as empty "" change it to the oposite, which is the month)
 		if (monthText != null && !monthText.isEmpty()) {
 			System.out.println("The Month is " + monthText);
 		}
