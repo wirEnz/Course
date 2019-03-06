@@ -135,7 +135,71 @@ public class Main {
 		}else{
 				System.out.println("sorry you are too young for this ride");
 		}
-		*/					
+		*/	
+		
+		// switch example
+		
+		int monthNum;
+		String monthText = "";
+		
+		System.out.println("Please enter the number of the Month you want: ");
+		monthNum = scanner.nextInt();
+		
+		switch(monthNum) {
+			case 1:{
+				monthText = "January";
+				break;
+			}
+			case 2:{
+				monthText = "Febuary";
+				break;
+			}
+			case 3:{
+				monthText = "March";
+			break;
+			}
+			case 4:{
+				monthText = "April";
+				break;
+			}
+			case 5:{
+				monthText = "May";
+				break;
+			}
+			case 6:{
+				monthText = "June";
+				break;
+			}
+			case 7:{
+				monthText = "July";
+				break;
+			}
+			case 8:{
+				monthText = "August";
+				break;
+			}
+			case 9:{
+				monthText = "September";
+				break;
+			}
+			case 10:{
+				monthText = "October";
+				break;
+			}
+			case 11:{
+				monthText = "November";
+				break;
+			}
+			case 12:{
+				monthText = "decemeber";
+				break;
+			}
+		
+		}
+		
+		if (monthText != null && !monthText.isEmpty()) {
+			System.out.println("The Month is " + monthText);
+		}
 		scanner.close();
 	}
 
