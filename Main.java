@@ -207,7 +207,7 @@ public class Main {
 		*/
 		
 		// Switch odd or evan
-		
+		/*
 		int num;
 		System.out.println("Please enter a number: ");
 		num = scanner.nextInt();
@@ -222,9 +222,54 @@ public class Main {
 			break;
 			}
 		}
+		*/
 		
+		
+		int dayNum = 0;
+		String day = "";
+		System.out.println("Please enter a day of the week: ");
+		day = scanner.next();
+		
+		switch(day) {
+		
+			case "Monday": {
+				dayNum = 1;
+				break;		
+			}
+			case "Tuesday":{
+				dayNum = 2;
+				break;
+			}
+			case "Wednesday": {
+				dayNum = 3;
+				break;
+			}
+			case "Thursday": {
+				dayNum = 4;
+				break;
+			}
+			case "Friday": {
+				dayNum = 5;
+				break;
+			}
+			case "Saturday": {
+				dayNum = 6;
+				break;
+			}
+			case "Sunday": {
+				dayNum = 7;
+				break;
+			}
+			default: {
+				System.out.println("Invalid input...");
+				break;
+			}
+		
+		}
+		if (dayNum > 0)
+			System.out.println("The number of your day is " + dayNum);
 			
-		scanner.close();
+	scanner.close();
 	}
 
 }
