@@ -138,7 +138,7 @@ public class Main {
 		*/	
 		
 		// switch example
-		
+		/*
 		int monthNum;
 		String monthText = "";
 		
@@ -204,6 +204,26 @@ public class Main {
 		if (monthText != null && !monthText.isEmpty()) {
 			System.out.println("The Month is " + monthText);
 		}
+		*/
+		
+		// Switch odd or evan
+		
+		int num;
+		System.out.println("Please enter a number: ");
+		num = scanner.nextInt();
+		
+		switch(num % 2) {
+			case 0: {
+			System.out.println("Your number is even");
+			break;
+			}
+			case 1: {
+			System.out.println("Your number is odd");
+			break;
+			}
+		}
+		
+			
 		scanner.close();
 	}
 
