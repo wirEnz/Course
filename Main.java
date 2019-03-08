@@ -269,7 +269,7 @@ public class Main {
 		if (dayNum > 0)
 			System.out.println("The number of your day is " + dayNum);
 		*/
-		//while loops
+		//while loop
 		// only enter a number between 1 - 100 or say thank you
 		/*
 		int i;
@@ -283,6 +283,21 @@ public class Main {
 		}else {
 			System.out.println("thank you");
 		}
+		*/
+		// do while loop
+		/*
+		int option;
+				
+		do {
+			System.out.println("Select an option between 1 and 5");
+			option = scanner.nextInt();
+			
+			if (option < 1 || option > 5) {
+				System.out.println("invalid option");
+			}
+		}while (option < 1 || option > 5);
+		
+		System.out.println("you selected option " + option);
 		*/
 		
 		scanner.close();
