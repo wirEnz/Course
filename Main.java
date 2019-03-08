@@ -299,7 +299,20 @@ public class Main {
 		
 		System.out.println("you selected option " + option);
 		*/
+		// for loop
+		/*
+		for(int i = 1; i <= 100; i++) {
+			System.out.println(i);
+		}
+		*/
 		
+		String[] days = {"Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday" };
+				
+		for(int i = 6; i >= 0; i--) {
+            System.out.println(days[i]);
+			
+		}
+			
 		scanner.close();
 	}
 
