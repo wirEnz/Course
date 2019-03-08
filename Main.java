@@ -223,8 +223,8 @@ public class Main {
 			}
 		}
 		*/
-		
-		
+		// Switch number to day of the week
+		/*
 		int dayNum = 0;
 		String day = "";
 		System.out.println("Please enter a day of the week: ");
@@ -268,8 +268,24 @@ public class Main {
 		}
 		if (dayNum > 0)
 			System.out.println("The number of your day is " + dayNum);
-			
-	scanner.close();
+		*/
+		//while loops
+		// only enter a number between 1 - 100 or say thank you
+		/*
+		int i;
+		System.out.println("Please enter a number");
+		i = scanner.nextInt();
+		if (i > 0) {			
+			while (i <= 100 && i > 0) {
+			System.out.println(i);
+			i++;
+			}
+		}else {
+			System.out.println("thank you");
+		}
+		*/
+		
+		scanner.close();
 	}
 
 }
