@@ -305,14 +305,70 @@ public class Main {
 			System.out.println(i);
 		}
 		*/
-		
+		//for loop with array ( can got foward and backwards)
+		/*
 		String[] days = {"Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday" };
 				
 		for(int i = 6; i >= 0; i--) {
             System.out.println(days[i]);
 			
 		}
+		*/
+		//Enhanced for loop (cannot go backwards through array)
+		/*
+		String[] days = {"Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday" };
+		
+		for (String day : days) {
+			System.out.println(day);
+		}
+		*/
+		
+		int[] test = new int[3];
+		
+		for (int i = 0; i < test.length; i++) {
+			int grade = 0;
 			
+			do {
+				System.out.println("Please enter test score: ");
+				grade = scanner.nextInt();
+				
+				if (grade <= 0 || grade > 100) {
+					System.out.println("Invalid grade, please enter again: ");
+				} else {
+					test[i] = grade;
+				}
+			
+			} while(grade < 0 && grade > 100);
+			
+		}
+		
+		System.out.println("Scores\tGrade\tComment");
+		
+		for (int i = 0; i < test.length; i++) {
+			int grade = test[i];
+			String gradeText = "";
+			String comment = "";
+			
+			if (grade > 90) {
+				gradeText = "A";
+				comment = "Excelent";
+			}
+			else if (grade > 70) {
+				gradeText = "B";
+				comment = "Good";		
+			}
+			else if ( grade >= 50) {
+				gradeText = "C";
+				comment = "Pass";		
+			}
+			else if (grade < 50) {
+				gradeText = "D";
+				comment = "Fail";
+			}
+			System.out.println(grade + "\t" + gradeText + "\t" +  comment);
+			
+		}
+				
 		scanner.close();
 	}
 
