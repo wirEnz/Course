@@ -372,6 +372,7 @@ public class Main {
 			
 		}
 		*/
+		// LinkedList
 		
 		LinkedList<String> items = new LinkedList<String>();
 		
