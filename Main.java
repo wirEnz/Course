@@ -374,6 +374,7 @@ public class Main {
 		*/
 		// LinkedList
 		// adding to shoppinglist LinkedList
+
 		
 		LinkedList<String> items = new LinkedList<String>();
 		
@@ -401,4 +402,3 @@ public class Main {
 	}
 
 }
-
