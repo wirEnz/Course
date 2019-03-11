@@ -373,7 +373,7 @@ public class Main {
 		}
 		*/
 		// LinkedList
-		// adding to shoppinglist
+		// adding to shoppinglist LinkedList
 		
 		LinkedList<String> items = new LinkedList<String>();
 		
