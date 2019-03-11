@@ -1,4 +1,6 @@
+import java.util.LinkedList;
 import java.util.Scanner;
+
 
 public class Main {
 
@@ -345,6 +347,7 @@ public class Main {
 		System.out.println("Scores\tGrade\tComment");
 		
 		for (int i = 0; i < test.length; i++) {
+			
 			int grade = test[i];
 			String gradeText = "";
 			String comment = "";
@@ -369,32 +372,31 @@ public class Main {
 			
 		}
 		*/
+		// LinkedList
 		
-		
-    String option = "Yes";
 		LinkedList<String> items = new LinkedList<String>();
-            
-    while (option.equals("Yes") || option.equals("yes")) {
-       System.out.println("Add item to your shopping list (Yes/No)");
-       option = scanner.next();
-               
-        if (option.equals("Yes") || option.equals("yes")){
-        System.out.println("Enter name of item");
-
-        String newItems = scanner.next();
-        items.add(newItems);
-      }
-    }
-    System.out.println("Shopping list: ");
-    for (String item : items){
-         System.out.println(item);
-    }
-    scanner.close();
-  }
-}
+		
+		String option = "Yes";
+		
+			while (option.equals("Yes") || option.equals("yes")) { 
+			System.out.println("Add item to list (yes/no)");
+			option = scanner.next();
+			
+			
+			if (option.equals("Yes") || option.equals("yes")) {
+				System.out.println("Enter item");
+			
+			String newItem = scanner.next();
+			items.add(newItem);
+			}
+		}
+		System.out.println("Shopping list");
+		System.out.println("-------------");
+		for (String item : items) {
+			System.out.println(item);
+		}
 				
 		scanner.close();
 	}
 
 }
-
