@@ -1,4 +1,6 @@
+import java.util.LinkedList;
 import java.util.Scanner;
+
 
 public class Main {
 
@@ -322,7 +324,7 @@ public class Main {
 			System.out.println(day);
 		}
 		*/
-		
+		/*
 		int[] test = new int[3];
 		
 		for (int i = 0; i < test.length; i++) {
@@ -345,6 +347,7 @@ public class Main {
 		System.out.println("Scores\tGrade\tComment");
 		
 		for (int i = 0; i < test.length; i++) {
+			
 			int grade = test[i];
 			String gradeText = "";
 			String comment = "";
@@ -367,6 +370,29 @@ public class Main {
 			}
 			System.out.println(grade + "\t" + gradeText + "\t" +  comment);
 			
+		}
+		*/
+		
+		LinkedList<String> items = new LinkedList<String>();
+		
+		String option = "Yes";
+		
+			while (option.equals("Yes") || option.equals("yes")) { 
+			System.out.println("Add item to list (yes/no)");
+			option = scanner.next();
+			
+			
+			if (option.equals("Yes") || option.equals("yes")) {
+				System.out.println("Enter item");
+			
+			String newItem = scanner.next();
+			items.add(newItem);
+			}
+		}
+		System.out.println("Shopping list");
+		System.out.println("-------------");
+		for (String item : items) {
+			System.out.println(item);
 		}
 				
 		scanner.close();
