@@ -463,13 +463,15 @@ public class Main {
 				System.out.println("All jobs complete");
 				
 		*/
-		
+		/*	  
+		// Reading a text fie  
 		File file = new File("C:/temp/BIT504.txt");
 		
 		FileInputStream stream = new FileInputStream(file);						// Declare a variable for the FileInputStream
 		
 		StringBuffer buffer = new StringBuffer();								// Declare a buffer to store the date from the file into
 		
+				
 		System.out.println("Size of the file in bytes: " + stream.available());	// Size of file in bytes
 		
 		int data;																// int variable
@@ -481,11 +483,36 @@ public class Main {
 		stream.close();
 		
 		System.out.println("Content from file: " + buffer);
+		*/
 		
+		File file = new File("c:/temp/BIT504.txt");		// source of file to read
 		
+		FileInputStream stream = new FileInputStream(file);
 		
+		StringBuffer buffer = new StringBuffer();
 		
+		int[] numbers = new int[5];
+		
+		int counter = 0;
+		int data;
+		
+		while ((data = stream.read()) != -1) {
 			
+			if (data == ',') {											// Checks for comma
+				numbers[counter] = Integer.parseInt(buffer.toString());	// Converts integer to string
+				counter++;												// Increase counter by 1
+				buffer.setLength(0);									// clears the buffer
+			
+			}else {
+				buffer.append((char) data);								// Add character to the buffer
+			}
+		}
+		
+		stream.close();
+		
+		for (int i = 0; i < numbers.length; i++) {
+			System.out.println("Index " + i + " = " + numbers[i]);
+		}
 					
 		scanner.close();
 	}
