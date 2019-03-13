@@ -3,6 +3,7 @@ import java.util.Scanner;
 import java.util.Stack;
 import java.io.File;
 import java.io.FileInputStream;
+import java.io.FileOutputStream;
 
 
 
@@ -484,7 +485,8 @@ public class Main {
 		
 		System.out.println("Content from file: " + buffer);
 		*/
-		
+		/*
+		// adding numbers from file to array
 		File file = new File("c:/temp/BIT504.txt");		// source of file to read
 		
 		FileInputStream stream = new FileInputStream(file);
@@ -513,6 +515,27 @@ public class Main {
 		for (int i = 0; i < numbers.length; i++) {
 			System.out.println("Index " + i + " = " + numbers[i]);
 		}
+		*/
+		// Writing to file
+		/*
+		FileOutputStream output = new FileOutputStream("c:/temp/BIT504.txt");	// Create the FileOutputStream object
+		String someTxt = "Message to be saved";
+		
+		for (int i = 0; i < someTxt.length(); i++) {
+			output.write(someTxt.charAt(i));
+		}
+		
+		output.close();
+		*/
+		
+		File file = new File("C:/temp/BIT504.txt");
+		
+		FileInputStream stream = new FileInputStream(file);
+		
+		StringBuffer buffer = new StringBuffer();
+		
+		
+				
 					
 		scanner.close();
 	}
