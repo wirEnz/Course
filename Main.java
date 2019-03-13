@@ -1,10 +1,15 @@
 import java.util.LinkedList;
 import java.util.Scanner;
+import java.util.Stack;
+import java.io.File;
+import java.io.FileInputStream;
+
+
 
 
 public class Main {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws Exception {
 		Scanner scanner = new Scanner(System.in);
 		
 		// GST Calculator
@@ -375,7 +380,7 @@ public class Main {
 		// LinkedList
 		// adding to shoppinglist LinkedList
 
-		
+		/*
 		LinkedList<String> items = new LinkedList<String>();
 		
 		String option = "Yes";
@@ -397,7 +402,91 @@ public class Main {
 		for (String item : items) {
 			System.out.println(item);
 		}
+		*/
+		/*
+				Stack<String> jobs = new Stack<>();
 				
+				jobs.push("Mow lawns");
+				jobs.push("Wash windows");
+				jobs.push("Take out the trash");
+				jobs.push("Give car an oil change");
+				
+				// [Mow lawns, Wash windows, Take out the trash, Give car an oil change]
+				System.out.println(jobs);
+				
+				jobs.pop();
+				
+				// [Mow lawns, Wash windows, Take out the trash]
+				System.out.println(jobs);
+				
+				jobs.push("Paint door");
+				
+				// [Mow lawns, Wash windows, Take out the trash, Paint door]
+				System.out.println(jobs);
+				
+				jobs.pop();
+				jobs.pop();
+				jobs.pop();
+				
+				// [Mow lawns]
+				System.out.println(jobs);
+				
+				jobs.push("Trim hedge");
+				
+				// [Mow lawns, Trim hedge]
+				System.out.println(jobs);
+		*/
+		/* job stack
+		Stack<String> jobs = new Stack<>();
+		
+		int option;
+		
+		do {
+			System.out.println("1:\tAdd job\n2:\tRemove job\n\tEnter option");
+			option = scanner.nextInt();
+			
+			if (option == 1) {							// If 1 is selected user adds job to stack
+				System.out.println("Enter job name:");
+				String newJob = scanner.next();			// user input
+				jobs.add(newJob);						// adds newJob (user input) to stack
+				System.out.println(jobs);
+				
+			
+			}else if (option == 2) {
+				jobs.pop();								// if 2 is selected removes last job added to stack
+				System.out.println(jobs);
+			}else {
+				System.out.println("Invalid option");
+			}
+		
+		}while (jobs.size() > 0);						// while stack has 1 or more elements continues with do loop, if not continues with code				
+				System.out.println("All jobs complete");
+				
+		*/
+		
+		File file = new File("C:/temp/BIT504.txt");
+		
+		FileInputStream stream = new FileInputStream(file);						// Declare a variable for the FileInputStream
+		
+		StringBuffer buffer = new StringBuffer();								// Declare a buffer to store the date from the file into
+		
+		System.out.println("Size of the file in bytes: " + stream.available());	// Size of file in bytes
+		
+		int data;																// int variable
+		
+		while((data = stream.read()) != -1) {									// continue looping until there is no more data to read from file
+			buffer.append((char) data);
+		}
+		
+		stream.close();
+		
+		System.out.println("Content from file: " + buffer);
+		
+		
+		
+		
+			
+					
 		scanner.close();
 	}
 
