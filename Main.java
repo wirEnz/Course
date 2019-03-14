@@ -527,15 +527,57 @@ public class Main {
 		
 		output.close();
 		*/
-		
+		/*
 		File file = new File("C:/temp/BIT504.txt");
 		
 		FileInputStream stream = new FileInputStream(file);
 		
 		StringBuffer buffer = new StringBuffer();
 		
+		int[] numbers = new int[10];
+		int counter = 0;
+		int data;
 		
+		while ((data = stream.read()) != -1) {
+			if (data == ',' || data == '.') {
+				numbers[counter] = Integer.parseInt(buffer.toString());
+				counter++;
+				buffer.setLength(0);
+								
+			}else {
+				buffer.append((char) data);
+			}
+		}
+		
+		stream.close();
+		
+		for (int i = 0; i < numbers.length; i++) {
+			System.out.println("Index " + i + " = " + numbers[i]);
+		}
+		*/
+		/*
+		FileOutputStream output = new FileOutputStream("c:/temp/output.txt");
+		String choice = "";
+        
+        while(choice != "no" && choice != "No") {
+            System.out.println("Do you wish to write text to the file? (Yes/No)");
+            choice = scanner.next();
+            if(choice.equals("Yes") || choice.equals("yes")) {
+                System.out.println("Enter text to write to file:");
+                String input = scanner.next();
+                for(int i = 0; i < input.length(); i++) {
+                    output.write(input.charAt(i));
+                }
+            } else if(choice.equals("No") || choice.equals("no")) {
+                break;
+            } else {
+                System.out.println("Invalid choice. Please try again.");;
+			}
+		}
 				
+		output.close();
+		
+		*/
 					
 		scanner.close();
 	}
